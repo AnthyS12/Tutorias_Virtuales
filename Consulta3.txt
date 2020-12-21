@@ -1,0 +1,30 @@
+/*
+Consulta 3.-
+Consultar datos de los estudiantes que asistieron a una tutoria en una fecha determinada.
+*/
+SELECT 
+  (estudiante.nombre_est || ' ' || estudiante.apellido_est) AS estudiante,  
+  curso.descripcion_cur AS curso, 
+  materia.descripcion_mat AS materia, 
+  clase.calificacion_cla AS nota, 
+  detalle_tutoria.asistenciaestudiante_dettut AS asistencia, 
+  tutoria.descripcion_tut AS descripcion, 
+  tutoria.fecha_tut AS fecha
+FROM 
+  public.clase, 
+  public.detalle_materia, 
+  public.detalle_tutoria, 
+  public.estudiante, 
+  public.materia, 
+  public.profesor, 
+  public.tutoria, 
+  public.curso
+WHERE 
+  clase.id_cla = detalle_tutoria.id_cla AND
+  detalle_materia.id_detmat = clase.id_detmat AND
+  estudiante.id_est = clase.id_est AND
+  materia.id_mat = detalle_materia.id_mat AND
+  profesor.id_pro = detalle_materia.id_pro AND
+  tutoria.id_tut = detalle_tutoria.id_tut AND
+  curso.id_cur = clase.id_cur and 
+  tutoria.fecha_tut='2020/12/03'and detalle_tutoria.asistenciaestudiante_dettut='SI';

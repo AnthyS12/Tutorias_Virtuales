@@ -1,0 +1,28 @@
+/*
+Consulta 2.-
+Consultar datos de contacto y numero celular del representante de alumnos con notas menores a 7.
+*/
+
+SELECT 
+  (estudiante.nombre_est || ' ' || estudiante.apellido_est) AS estudiante, 
+  curso.descripcion_cur AS Curso,
+  (nombre_pro || ' ' || apellido_pro) AS profesor,
+  materia.descripcion_mat AS materia, 
+  clase.calificacion_cla AS nota, 
+  estudiante.telefonodomicilio_est AS telefeno_domicilio, 
+  estudiante.celularrepresentante_est AS celular_representante, 
+  estudiante.direccion_est AS direccion
+FROM 
+  public.clase, 
+  public.curso, 
+  public.estudiante, 
+  public.profesor, 
+  public.detalle_materia, 
+  public.materia
+WHERE 
+  curso.id_cur = clase.id_cur AND
+  estudiante.id_est = clase.id_est AND
+  profesor.id_pro = detalle_materia.id_pro AND
+  detalle_materia.id_detmat = clase.id_detmat AND
+  materia.id_mat = detalle_materia.id_mat AND
+  clase.calificacion_cla < 7; 

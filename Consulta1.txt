@@ -1,0 +1,22 @@
+/*
+Consulta 1.-
+Consultar todos los alumnos con notas menores a 7 clasificados por curso.
+*/
+
+SELECT 
+  curso.descripcion_cur as curso,
+  count(estudiante.id_est) as alumnos_con_rojo
+FROM 
+  public.clase, 
+  public.curso, 
+  public.detalle_tutoria, 
+  public.estudiante, 
+  public.tutoria
+WHERE 
+  clase.id_cla = detalle_tutoria.id_cla AND
+  curso.id_cur = clase.id_cur AND
+  estudiante.id_est = clase.id_est AND
+  tutoria.id_tut = detalle_tutoria.id_tut and
+  clase.calificacion_cla < 7
+GROUP BY
+  curso.descripcion_cur ;

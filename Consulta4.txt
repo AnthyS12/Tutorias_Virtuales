@@ -1,0 +1,32 @@
+/*
+Consulta 4.-
+Consultar por curso el numero de estudiantes que han asistido a tutorias
+*/
+
+SELECT 
+  curso.descripcion_cur AS curso,
+  count(estudiante.id_est) as alumnos_con_rojo, 
+  materia.descripcion_mat AS materia, 
+  tutoria.descripcion_tut AS descripcion_tutoria, 
+  tutoria.fecha_tut AS fecha_tutoria
+FROM 
+  public.clase, 
+  public.curso, 
+  public.estudiante, 
+  public.detalle_materia, 
+  public.materia, 
+  public.tutoria, 
+  public.detalle_tutoria
+WHERE 
+  clase.id_cla = detalle_tutoria.id_cla AND
+  curso.id_cur = clase.id_cur AND
+  estudiante.id_est = clase.id_est AND
+  detalle_materia.id_detmat = clase.id_detmat AND
+  materia.id_mat = detalle_materia.id_mat AND
+  detalle_tutoria.id_tut = tutoria.id_tut AND 
+  detalle_tutoria.asistenciaestudiante_dettut='SI'
+ group by
+  curso.descripcion_cur,
+  materia.descripcion_mat,
+  tutoria.descripcion_tut,
+  tutoria.fecha_tut;

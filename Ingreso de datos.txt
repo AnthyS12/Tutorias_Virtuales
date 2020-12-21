@@ -1,0 +1,148 @@
+--------GRADOS---------
+insert into CURSO values(1, '1A');
+insert into CURSO values(2, '1B');
+insert into CURSO values(3, '1C');
+insert into CURSO values(4, '2A');
+insert into CURSO values(5, '2B');
+insert into CURSO values(6, '2C');
+insert into CURSO values(7, '3A');
+insert into CURSO values(8, '3B');
+insert into CURSO values(9, '3C');
+
+--------ESTUDIANTES---------
+insert into ESTUDIANTE values(1,'LUIS','MERA', 1302456875, 'M', '1999/10/01','659452', '0965478945','8 de abril');
+insert into ESTUDIANTE values(2,'HEIDY','RIVERA',1305465845,'F','1999/10/01','234445','0967812305','Algarrobo');
+insert into ESTUDIANTE values(3,'MELINA','ZAMBRANO',4567895423,'F','1999/11/01','568374','0987456321','san pedro');
+insert into ESTUDIANTE values(4,'MELISSA','IBARRA',0124578965,'F','1999/10/08','478945','0978456123','8 de enero');
+insert into ESTUDIANTE values(5,'EMANUEL','QUINONEZ',1245789632,'M','1999/12/01','097647','0942135112','Tarqui');
+insert into ESTUDIANTE values(6,'JAVIER','VILLAFUERTE',7894561232,'M','1999/02/01','785960','0955412755','Las vegas');
+insert into ESTUDIANTE values(7,'ARIEL','ESPAÑA',5844578912,'M','1999/12/01','615346','0964578825','eloy alfaro');
+insert into ESTUDIANTE values(8,'OSCAR','VELEZ',1245789632,'M','1999/12/01','789152','0984561237','san pedro');
+insert into ESTUDIANTE values(9,'GABRIEL','ALONZO',0231459785,'M','1999/12/07','481526','0987745123','8 de octubre');
+insert into ESTUDIANTE values(10,'FERNANDA','DELGADO',5784956123,'F','1999/12/01','123562','0987885461','5 de junio');
+insert into ESTUDIANTE values(11,'JUANITO','DEL VALLE',1254879630,'M','1999/12/01','558964','0962254631','buenos aires');
+insert into ESTUDIANTE values(12,'JOSE','MORAN',0125478953,'M','1999/12/01','169485','0988747412','la dolorosa');
+insert into ESTUDIANTE values(13,'CARLOS','FRESA',4859621350,'M','1999/12/03','485623','0996547812','urbirrios');
+insert into ESTUDIANTE values(14,'ANDREA','ZAMBRANO',2145789652,'F','1999/12/01','485912','0934851126','santa monica');
+insert into ESTUDIANTE values(15,'PABLO','ESCOBAR',2032457896,'M','1999/06/04','723156','09847751246','las cumbres');--
+insert into ESTUDIANTE values(16,'JAMIE','MENDOZA',0231457896,'F','1999/12/01','789456','0995478451','acacias');
+insert into ESTUDIANTE values(17,'JERRY','RIVERA',130264785,'M','1999/03/04','032184','0900541236','santa martha');
+insert into ESTUDIANTE values(18,'CRISTIAN','NODAL',2365478912,'M','1999/05/02','852945','0944875512','la dolorosa');
+insert into ESTUDIANTE values(19,'JESSY','INTRIAGO',2457896312,'F','1999/10/01','963215','0933450215','santa monica');
+insert into ESTUDIANTE values(20,'PABLO','DELGADO',2457896312,'M','1999/12/01','124563','0988745123','san juan');
+insert into ESTUDIANTE values(21,'CINDY','MENDOZA',4587963152,'F','1999/02/02','445689','0999874565','santa martha');
+insert into ESTUDIANTE values(22,'CRISTINA','TORRES',2457896312,'F','1999/10/01','254631','095521456','8 de abril');
+insert into ESTUDIANTE values(23,'FRANCISCO','ZAMBRANO',1302145697,'M','1999/12/01','895621','0998878451','1 de mayo');
+insert into ESTUDIANTE values(24,'MARTHA','ANCHUNDIA',4587961236,'F','1999/07/01','789456','0965478500','la dolorosa');
+insert into ESTUDIANTE values(25,'FABRICIO','DELGADO',5874126633,'M','1999/01/01','321546','0956633221','santa monica');
+
+--------PROFESORES---------
+insert into PROFESOR values(1,'JUAN','QUIROZ','112465623','0995456231','cordova');
+insert into PROFESOR values(2,'MARCOS','SEGOVIA','454545555','0987450021','5 de agosto');
+insert into PROFESOR values(3,'MELINA','MENDOZA','4567892145','0911451214','24 de mayo');
+insert into PROFESOR values(4,'DAVID','MERA','3654789512','0963214568','4 de noviembre');
+insert into PROFESOR values(5,'PANCHO','QUINTANA','1305247896','0984710023','santa martha');
+insert into PROFESOR values(6,'IGNACIO','SALAZAR','2145698723','0978451120','los esteros');
+insert into PROFESOR values(7,'MARTHA','CEDEÑO','2456123089','0962145362','por venir');
+insert into PROFESOR values(8,'LILIA','MACIAS','0214578963','0945158545','los electricos');
+insert into PROFESOR values(9,'PATRICIA','CHAVEZ','13026549785','0966500203','los esteros');
+insert into PROFESOR values(10,'GENESIS','MOREIRA','1312456987','0987451124','jocay');
+
+
+--------MATERIAS---------
+insert into MATERIA values(1,'CIENCIAS NATURALES');
+insert into MATERIA values(2,'CIENCIAS SOCIALES');
+insert into MATERIA values(3,'INFORMATICA');
+insert into MATERIA values(4,'MATEMATICAS');
+insert into MATERIA values(5,'LENGUA Y LITERATURA');
+insert into MATERIA values(6,'HISTORIA');
+insert into MATERIA values(7,'EDUCACION FISICA');
+insert into MATERIA values(8,'CULTURA ARTISTICA');
+insert into MATERIA values(9,'QUIMICA');
+insert into MATERIA values(10,'BIOLOGIA');
+
+
+--------DETALLE_MATERIAS---------
+insert into DETALLE_MATERIA values(1,1,1);
+insert into DETALLE_MATERIA values(2,2,2);
+insert into DETALLE_MATERIA values(3,3,3);
+insert into DETALLE_MATERIA values(4,4,4);
+insert into DETALLE_MATERIA values(5,5,5);
+insert into DETALLE_MATERIA values(6,6,6);
+insert into DETALLE_MATERIA values(7,7,7);
+insert into DETALLE_MATERIA values(8,8,8);
+insert into DETALLE_MATERIA values(9,9,9);
+insert into DETALLE_MATERIA values(10,10,10);
+
+
+
+--------CLASES---------
+insert into CLASE values(1,1,1,1,7);
+insert into CLASE values(2,1,2,1,5);
+insert into CLASE values(3,1,3,1,9);
+insert into CLASE values(4,1,4,1,10);
+insert into CLASE values(5,1,5,1,8);
+
+insert into CLASE values(6,2,6,2,6);
+insert into CLASE values(7,2,7,2,4);
+insert into CLASE values(8,2,8,3,3);
+insert into CLASE values(9,2,9,2,6.3);
+insert into CLASE values(10,2,10,2,6.5);
+
+insert into CLASE values(11,3,11,3,7);
+insert into CLASE values(12,3,12,3,8);
+insert into CLASE values(13,3,13,3,6);
+insert into CLASE values(14,3,14,3,8);
+insert into CLASE values(15,3,15,3,7.1);
+
+insert into CLASE values(16,4,16,4,5);
+insert into CLASE values(17,4,17,4,5);
+insert into CLASE values(18,4,18,4,9);
+insert into CLASE values(19,4,19,4,7.5);
+insert into CLASE values(20,4,20,4,3);
+
+insert into CLASE values(21,5,21,5,5);
+insert into CLASE values(22,5,22,5,8);
+insert into CLASE values(23,5,23,5,7);
+insert into CLASE values(24,5,24,5,8);
+insert into CLASE values(25,5,25,5,6);
+
+
+--------TUTORIAS---------
+insert into TUTORIA values(1,'REVISION','2020/12/01','13:00:00','14:00:00');
+insert into TUTORIA values(2,'REPASO EXAMEN','2020/12/02','10:00:00','11:00:00');
+insert into TUTORIA values(3,'REPASO CLASE','2020/12/03','09:00:00','09:30:00');
+insert into TUTORIA values(4,'REVISION TAREA','2020/12/04','08:00:00','09:00:00');
+insert into TUTORIA values(5,'PRUEBA RECUPERACION','2020/12/05','14:00:00','15:00:00');
+
+
+--------DETALLE TUTORIAS---------
+insert into DETALLE_TUTORIA values(1,1,1,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(2,2,1,'NO','NINGUNA');
+insert into DETALLE_TUTORIA values(3,3,1,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(4,4,1,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(5,5,1,'NO','NINGUNA');
+
+insert into DETALLE_TUTORIA values(6,6,2,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(7,7,2,'NO','NINGUNA');
+insert into DETALLE_TUTORIA values(8,8,2,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(9,9,2,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(10,10,2,'NO','NINGUNA');
+
+insert into DETALLE_TUTORIA values(11,11,3,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(12,12,3,'NO','NINGUNA');
+insert into DETALLE_TUTORIA values(13,13,3,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(14,14,3,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(15,15,3,'NO','NINGUNA');
+
+insert into DETALLE_TUTORIA values(16,16,4,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(17,17,4,'NO','NINGUNA');
+insert into DETALLE_TUTORIA values(18,18,4,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(19,19,4,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(20,20,4,'NO','NINGUNA');
+
+insert into DETALLE_TUTORIA values(21,21,5,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(22,22,5,'NO','NINGUNA');
+insert into DETALLE_TUTORIA values(23,23,5,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(24,24,5,'SI','NINGUNA');
+insert into DETALLE_TUTORIA values(25,25,5,'NO','NINGUNA');

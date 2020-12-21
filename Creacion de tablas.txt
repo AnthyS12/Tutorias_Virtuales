@@ -1,0 +1,93 @@
+/*
+  --PROYECTO TUTORIAS VIRTUALES--
+   
+Luis Anthony Moreira Lucas 5A
+GESTION DE BASE DE DATOS
+
+*/
+
+--------TABLA CURSO-----------
+create table CURSO(
+ 	id_cur INT not null PRIMARY KEY,
+ 	descripcion_cur VARCHAR(10) not null
+);
+--------TABLA ESTUDIANTE---------
+create table ESTUDIANTE(
+ 	id_est INT not null PRIMARY KEY,
+ 	nombre_est VARCHAR(30) not null,
+	apellido_est VARCHAR(30) not null,
+	cedula_est VARCHAR(15) not null,
+	genero_est VARCHAR(5) not null,
+	fechaNacimiento DATE not null,
+	telefonoDomicilio_est VARCHAR(15) not null,
+	celularRepresentante_est VARCHAR(15) not null,
+	direccion_est VARCHAR(30) not null
+);
+
+--------TABLA PROFESOR---------
+create table PROFESOR(
+ 	id_pro INT not null PRIMARY KEY,
+ 	nombre_pro VARCHAR(30) not null,
+	apellido_pro VARCHAR(30) not null,
+	cedula_pro VARCHAR(15) not null,
+	celular_pro VARCHAR(15) not null,	
+	direccion_pro VARCHAR(30) not null
+);
+
+--------TABLA MATERIA---------
+create table MATERIA(
+ 	id_mat INT not null PRIMARY KEY,
+ 	descripcion_mat VARCHAR(30) not null
+);
+
+--------TABLA DETALLE MATERIA---------
+create table DETALLE_MATERIA(
+	id_detmat INT not null PRIMARY KEY,
+	id_mat INT not null,
+	id_pro INT not null,
+	
+	CONSTRAINT detalleMateria_materia_fk foreign key (id_mat)
+ 	references MATERIA (id_mat)match simple,
+	CONSTRAINT detalleMateria_profesor_fk foreign key (id_pro)
+ 	references PROFESOR (id_pro)match simple
+);
+
+--------TABLA CLASE---------
+create table CLASE(
+	id_cla INT not null PRIMARY KEY,
+	id_detmat INT not null,
+ 	id_est INT not null,
+	id_cur INT not null,
+	calificacion_cla FLOAT not null,
+	
+	CONSTRAINT clase_detalleMateria_fk foreign key (id_detmat)
+ 	references DETALLE_MATERIA (id_detmat)match simple,
+	CONSTRAINT clase_estudiante_fk foreign key (id_est)
+ 	references ESTUDIANTE (id_est)match simple,
+	CONSTRAINT clase_curso_fk foreign key (id_cur)
+ 	references CURSO (id_cur)match simple
+);
+
+--------TABLA TUTORIA---------
+create table TUTORIA(
+	id_tut INT PRIMARY KEY not nulL,
+	descripcion_tut VARCHAR(30),
+	fecha_tut DATE NOT null,	
+	horaInicio_tut TIME not null,
+	horaFin_tut TIME not null
+);
+
+--------TABLA DETALLE TUTORIA---------
+create table DETALLE_TUTORIA(
+ 	id_dettut INT PRIMARY KEY not null,
+	id_cla INT not null,
+	id_tut INT not nulL,
+	asistenciaEstudiante_dettut VARCHAR(5),
+	observaciones_dettut VARCHAR(50),
+	
+	CONSTRAINT detalleTutoria_clase_fk foreign key (id_cla)
+ 	references CLASE (id_cla)match simple,
+	CONSTRAINT detalleTutoria_tutoria_fk foreign key (id_tut)
+ 	references TUTORIA (id_tut)match simple
+		
+);
